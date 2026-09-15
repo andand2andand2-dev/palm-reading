@@ -12,129 +12,86 @@
     <title>마음 프리뷰</title>
 
     <style>
-
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-
             font-family:
                 "Malgun Gothic",
                 "Apple SD Gothic Neo",
                 sans-serif;
 
             background: #fffaf0;
-
             color: #29241f;
         }
 
         .container {
             width: 100%;
             max-width: 760px;
-
             margin: 0 auto;
-
-            padding:
-                24px
-                16px
-                70px;
+            padding: 24px 16px 70px;
         }
-
-        /* =========================
-           뒤로가기
-        ========================= */
 
         .back-button {
             display: inline-block;
-
             margin-bottom: 24px;
+            padding: 10px 17px;
 
-            padding:
-                10px
-                17px;
-
-            border:
-                2px solid
-                #29241f;
-
+            border: 2px solid #29241f;
             border-radius: 999px;
 
             background: white;
-
             color: #29241f;
 
             text-decoration: none;
-
             font-size: 14px;
-
             font-weight: 800;
         }
 
-
-        /* =========================
-           상단
-        ========================= */
-
         .hero {
             text-align: center;
-
             margin-bottom: 28px;
         }
 
         .hero-icons {
             display: flex;
-
-            justify-content:
-                space-between;
-
+            justify-content: space-between;
             align-items: center;
 
             max-width: 330px;
-
-            margin:
-                0 auto
-                10px;
+            margin: 0 auto 10px;
 
             font-size: 36px;
         }
 
         .title-bubble {
             display: inline-block;
-
-            padding:
-                10px
-                25px;
+            padding: 10px 25px;
 
             background: #ffe58a;
-
             border-radius: 50%;
 
-            transform:
-                rotate(-2deg);
+            transform: rotate(-2deg);
         }
 
         h1 {
             margin: 0;
 
             font-size: 45px;
-
             font-weight: 900;
 
             letter-spacing: -3px;
-
             line-height: 1.05;
 
-            transform:
-                rotate(2deg);
+            transform: rotate(2deg);
         }
 
         .subtitle {
             margin-top: 16px;
 
             font-size: 19px;
-
             font-weight: 900;
         }
 
@@ -144,27 +101,17 @@
             color: #746c62;
 
             font-size: 13px;
-
             line-height: 1.7;
         }
 
-
-        /* =========================
-           작성 예시
-        ========================= */
-
         .example-card {
             margin-bottom: 25px;
+            padding: 18px;
 
             background: white;
 
-            border:
-                3px solid
-                #29241f;
-
+            border: 3px solid #29241f;
             border-radius: 25px;
-
-            padding: 18px;
 
             box-shadow:
                 0 6px 0
@@ -173,21 +120,15 @@
 
         #exampleToggle {
             width: 100%;
-
             padding: 14px;
 
-            border:
-                3px solid
-                #29241f;
-
+            border: 3px solid #29241f;
             border-radius: 999px;
 
             background: #dcecc8;
-
             color: #29241f;
 
             font-size: 16px;
-
             font-weight: 900;
 
             cursor: pointer;
@@ -195,7 +136,6 @@
 
         #exampleArea {
             display: none;
-
             margin-top: 17px;
         }
 
@@ -205,28 +145,18 @@
 
         .example-image {
             display: block;
-
             width: 100%;
 
             border-radius: 18px;
         }
 
-
-        /* =========================
-           섹션 공통
-        ========================= */
-
         .section {
             margin-bottom: 25px;
-
             padding: 21px;
 
             background: white;
 
-            border:
-                3px solid
-                #29241f;
-
+            border: 3px solid #29241f;
             border-radius: 25px;
 
             box-shadow:
@@ -236,7 +166,6 @@
 
         .section-header {
             display: flex;
-
             align-items: center;
 
             gap: 10px;
@@ -251,18 +180,13 @@
             flex-shrink: 0;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
-            border:
-                2px solid
-                #29241f;
-
+            border: 2px solid #29241f;
             border-radius: 50%;
 
             font-size: 24px;
-
             font-weight: 900;
         }
 
@@ -279,14 +203,11 @@
         }
 
         .section-title {
-            padding:
-                8px
-                17px;
+            padding: 8px 17px;
 
             border-radius: 999px;
 
             font-size: 22px;
-
             font-weight: 900;
         }
 
@@ -308,14 +229,8 @@
             color: #686158;
 
             font-size: 14px;
-
             line-height: 1.75;
         }
-
-
-        /* =========================
-           입력
-        ========================= */
 
         .field {
             margin-bottom: 19px;
@@ -327,8 +242,11 @@
             margin-bottom: 8px;
 
             font-size: 14px;
-
             font-weight: 900;
+        }
+
+        .required {
+            color: #d95757;
         }
 
         input[type="text"],
@@ -338,20 +256,14 @@
         textarea {
             width: 100%;
 
-            padding:
-                13px
-                14px;
+            padding: 13px 14px;
 
-            border:
-                2px solid
-                #302b26;
-
+            border: 2px solid #302b26;
             border-radius: 13px;
 
             background: white;
 
             font-family: inherit;
-
             font-size: 16px;
 
             outline: none;
@@ -370,7 +282,6 @@
             min-height: 130px;
 
             resize: vertical;
-
             line-height: 1.7;
         }
 
@@ -384,11 +295,6 @@
             gap: 14px;
         }
 
-
-        /* =========================
-           성별
-        ========================= */
-
         .choice-row {
             display: flex;
 
@@ -399,7 +305,6 @@
 
         .choice {
             flex: 1;
-
             min-width: 90px;
         }
 
@@ -409,13 +314,9 @@
 
         .choice label {
             margin: 0;
-
             padding: 12px;
 
-            border:
-                2px solid
-                #29241f;
-
+            border: 2px solid #29241f;
             border-radius: 13px;
 
             background: white;
@@ -428,11 +329,6 @@
         .choice input:checked + label {
             background: #dcecc8;
         }
-
-
-        /* =========================
-           관심 영역
-        ========================= */
 
         .checkbox-grid {
             display: grid;
@@ -447,15 +343,11 @@
 
         .check-item {
             display: flex;
-
             align-items: center;
 
             padding: 12px;
 
-            border:
-                2px solid
-                #29241f;
-
+            border: 2px solid #29241f;
             border-radius: 13px;
 
             background: white;
@@ -468,24 +360,13 @@
         .check-item input {
             margin-right: 8px;
 
-            transform:
-                scale(1.2);
+            transform: scale(1.2);
         }
 
-
-        /* =========================
-           실제 종이 안내
-        ========================= */
-
         .paper-box {
-            padding:
-                20px
-                18px;
+            padding: 20px 18px;
 
-            border:
-                3px dashed
-                #29241f;
-
+            border: 3px dashed #29241f;
             border-radius: 22px;
 
             background: #fff1f2;
@@ -503,7 +384,6 @@
             margin-bottom: 10px;
 
             font-size: 20px;
-
             font-weight: 900;
         }
 
@@ -511,7 +391,6 @@
             color: #655e56;
 
             font-size: 14px;
-
             line-height: 1.8;
         }
 
@@ -519,31 +398,19 @@
             display: inline-block;
 
             margin-top: 13px;
-
-            padding:
-                8px
-                14px;
+            padding: 8px 14px;
 
             background: #ffd9dc;
 
             border-radius: 999px;
 
             font-size: 13px;
-
             font-weight: 900;
         }
 
-
-        /* =========================
-           개인정보 안내
-        ========================= */
-
         .privacy-note {
             margin-top: 8px;
-
-            padding:
-                13px
-                15px;
+            padding: 13px 15px;
 
             border-radius: 16px;
 
@@ -552,36 +419,22 @@
             color: #625b53;
 
             font-size: 12px;
-
             line-height: 1.7;
         }
-
-
-        /* =========================
-           저장 버튼
-        ========================= */
 
         #saveButton {
             width: 100%;
 
             margin-top: 5px;
+            padding: 17px 18px;
 
-            padding:
-                17px
-                18px;
-
-            border:
-                3px solid
-                #29241f;
-
+            border: 3px solid #29241f;
             border-radius: 999px;
 
             background: #ffd96e;
-
             color: #29241f;
 
             font-size: 21px;
-
             font-weight: 900;
 
             cursor: pointer;
@@ -592,8 +445,7 @@
         }
 
         #saveButton:active {
-            transform:
-                translateY(2px);
+            transform: translateY(2px);
 
             box-shadow:
                 0 3px 0
@@ -604,7 +456,6 @@
             display: none;
 
             margin-top: 15px;
-
             padding: 14px;
 
             background: #dcecc8;
@@ -616,11 +467,6 @@
             font-weight: 900;
         }
 
-
-        /* =========================
-           하단
-        ========================= */
-
         .footer-note {
             margin-top: 25px;
 
@@ -629,29 +475,19 @@
             color: #8a8278;
 
             font-size: 12px;
-
             line-height: 1.7;
         }
 
         .footer-icons {
             display: flex;
-
-            justify-content:
-                space-around;
+            justify-content: space-around;
 
             margin-top: 18px;
 
             font-size: 34px;
         }
 
-
-        /* =========================
-           모바일
-        ========================= */
-
-        @media (
-            max-width: 560px
-        ) {
+        @media (max-width: 560px) {
 
             h1 {
                 font-size: 36px;
@@ -666,23 +502,18 @@
             }
 
             .two-column {
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
             .checkbox-grid {
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
             .hero-icons {
                 max-width: 270px;
-
                 font-size: 30px;
             }
-
         }
-
     </style>
 </head>
 
@@ -690,9 +521,6 @@
 <body>
 
 <div class="container">
-
-
-    <!-- 뒤로가기 -->
 
     <a
         href="/"
@@ -702,28 +530,19 @@
     </a>
 
 
-
-    <!-- 상단 -->
-
     <div class="hero">
 
         <div class="hero-icons">
-
             <span>💗</span>
-
             <span>✨</span>
-
             <span>✏️</span>
-
         </div>
 
 
         <div class="title-bubble">
-
             <h1>
                 마음 프리뷰 ♡
             </h1>
-
         </div>
 
 
@@ -733,14 +552,11 @@
 
 
         <div class="description">
-
             손금을 본 뒤 떠오른 생각을
             천천히 돌아보는 시간이에요.
-
         </div>
 
     </div>
-
 
 
     <!-- 작성 예시 -->
@@ -748,9 +564,7 @@
     <div class="example-card">
 
         <button id="exampleToggle">
-
             📄 마음 프리뷰 작성 예시 보기
-
         </button>
 
 
@@ -767,30 +581,18 @@
     </div>
 
 
-
-    <!-- 1 기본 정보 -->
+    <!-- 1. 기본 정보 -->
 
     <section class="section">
 
-
         <div class="section-header">
 
-            <div
-                class="
-                    number
-                    green
-                "
-            >
+            <div class="number green">
                 1
             </div>
 
 
-            <div
-                class="
-                    section-title
-                    green-title
-                "
-            >
+            <div class="section-title green-title">
                 기본 정보
             </div>
 
@@ -798,38 +600,37 @@
 
 
         <div class="section-description">
-
-            먼저 간단한 기본 정보를 입력해주세요.
-
+            먼저 기본 정보를 입력해주세요.
+            <span class="required">*</span> 표시가 있는 항목은 필수입니다.
         </div>
-
 
 
         <div class="field">
 
             <label for="name">
                 성명
+                <span class="required">*</span>
             </label>
 
             <input
                 type="text"
                 id="name"
                 placeholder="이름을 입력해주세요"
+                required
             >
 
         </div>
-
 
 
         <div class="field">
 
             <label>
                 성별
+                <span class="required">*</span>
             </label>
 
 
             <div class="choice-row">
-
 
                 <div class="choice">
 
@@ -878,20 +679,18 @@
 
                 </div>
 
-
             </div>
 
         </div>
 
 
-
         <div class="two-column">
-
 
             <div class="field">
 
                 <label for="age">
                     연령
+                    <span class="required">*</span>
                 </label>
 
                 <input
@@ -900,6 +699,7 @@
                     min="1"
                     max="120"
                     placeholder="예: 25"
+                    required
                 >
 
             </div>
@@ -918,74 +718,47 @@
 
             </div>
 
-
         </div>
-
 
 
         <div class="field">
 
             <label for="contact">
-
                 연락처
-                <span
-                    style="
-                        font-weight: normal;
-                        color: #8d857c;
-                    "
-                >
-                    (선택)
-                </span>
-
+                <span class="required">*</span>
             </label>
-
 
             <input
                 type="tel"
                 id="contact"
-                placeholder="필요한 경우에만 입력해주세요"
+                inputmode="tel"
+                placeholder="예: 010-1234-5678"
+                required
             >
 
         </div>
 
 
-
         <div class="privacy-note">
-
-            🔒 입력한 정보는 현재 서버나 데이터베이스로 전송하지 않고
-            이 기기의 브라우저에만 임시 저장합니다.
-            연락처가 필요하지 않다면 입력하지 않아도 됩니다.
-
+            🔒 현재 입력한 내용은 서버나 데이터베이스로 전송하지 않고
+            이 기기의 브라우저에만 저장됩니다.
         </div>
-
 
     </section>
 
 
-
-    <!-- 2 손금에서 떠오른 나 -->
+    <!-- 2. 손금에서 떠오른 나 -->
 
     <section class="section">
 
-
         <div class="section-header">
 
-            <div
-                class="
-                    number
-                    yellow
-                "
-            >
+            <div class="number yellow">
                 2
             </div>
 
 
-            <div
-                class="
-                    section-title
-                    yellow-title
-                "
-            >
+            <div class="section-title yellow-title">
                 손금에서 떠오른 나
             </div>
 
@@ -993,17 +766,13 @@
 
 
         <div class="section-description">
-
             오늘 손금 결과를 보면서
             가장 마음에 남거나 생각해보게 된 부분은 무엇인가요?
             여러 개 선택해도 괜찮습니다.
-
         </div>
 
 
-
         <div class="checkbox-grid">
-
 
             <label class="check-item">
 
@@ -1082,19 +851,14 @@
 
             </label>
 
-
         </div>
-
 
 
         <div class="field">
 
             <label for="reason">
-
                 그렇게 생각한 이유는 무엇인가요?
-
             </label>
-
 
             <textarea
                 id="reason"
@@ -1103,34 +867,21 @@
 
         </div>
 
-
     </section>
 
 
-
-    <!-- 3 그림으로 만나는 지금의 나 -->
+    <!-- 3. 그림 -->
 
     <section class="section">
 
-
         <div class="section-header">
 
-            <div
-                class="
-                    number
-                    pink
-                "
-            >
+            <div class="number pink">
                 3
             </div>
 
 
-            <div
-                class="
-                    section-title
-                    pink-title
-                "
-            >
+            <div class="section-title pink-title">
                 그림으로 만나는 지금의 나
             </div>
 
@@ -1138,16 +889,12 @@
 
 
         <div class="section-description">
-
             지금의 나를 떠올렸을 때
             어떤 모습이나 장면이 생각나는지 잠시 생각해보세요.
-
         </div>
 
 
-
         <div class="paper-box">
-
 
             <div class="paper-icon">
                 📝🎨
@@ -1155,9 +902,7 @@
 
 
             <div class="paper-title">
-
                 실제 종이에 직접 표현해보세요
-
             </div>
 
 
@@ -1177,11 +922,8 @@
 
 
             <div class="paper-highlight">
-
                 ✏️ 정답 없이 자유롭게 그려주세요
-
             </div>
-
 
         </div>
 
@@ -1192,152 +934,91 @@
         >
 
             <label for="drawingThought">
-
-                그림을 그리기 전에 떠오른 생각이 있다면
-                간단히 적어주세요.
-                <span
-                    style="
-                        font-weight: normal;
-                        color: #8d857c;
-                    "
-                >
+                그림을 그리기 전에 떠오른 생각
+                <span style="font-weight: normal; color: #8d857c;">
                     (선택)
                 </span>
-
             </label>
 
 
             <textarea
                 id="drawingThought"
-                placeholder="예: 요즘의 나는 조금 지쳐 있지만 다시 움직이고 싶은 모습이 떠올라요."
+                placeholder="지금 떠오르는 생각이 있다면 자유롭게 적어주세요."
             ></textarea>
 
         </div>
 
-
     </section>
 
 
-
-    <!-- 저장 -->
+    <!-- 저장 버튼 -->
 
     <button id="saveButton">
-
         💛 여기까지 저장하기
-
     </button>
 
 
     <div id="savedMessage">
-
         입력한 내용을 저장했어요 👍
-
     </div>
 
 
-
     <div class="footer-note">
-
         이 페이지는 자신을 돌아보기 위한 활동용 페이지입니다.<br>
-        입력한 내용을 정답처럼 생각하기보다
         지금 떠오르는 생각을 편하게 기록해보세요.
-
     </div>
 
 
     <div class="footer-icons">
-
         <span>💗</span>
-
         <span>🌱</span>
-
         <span>✨</span>
-
     </div>
 
-
 </div>
-
 
 
 <script>
 
     const exampleToggle =
-        document.getElementById(
-            "exampleToggle"
-        );
-
+        document.getElementById("exampleToggle");
 
     const exampleArea =
-        document.getElementById(
-            "exampleArea"
-        );
-
+        document.getElementById("exampleArea");
 
     const nameInput =
-        document.getElementById(
-            "name"
-        );
-
+        document.getElementById("name");
 
     const ageInput =
-        document.getElementById(
-            "age"
-        );
-
+        document.getElementById("age");
 
     const contactInput =
-        document.getElementById(
-            "contact"
-        );
-
+        document.getElementById("contact");
 
     const dateInput =
-        document.getElementById(
-            "date"
-        );
-
+        document.getElementById("date");
 
     const reasonInput =
-        document.getElementById(
-            "reason"
-        );
-
+        document.getElementById("reason");
 
     const drawingThoughtInput =
-        document.getElementById(
-            "drawingThought"
-        );
-
+        document.getElementById("drawingThought");
 
     const saveButton =
-        document.getElementById(
-            "saveButton"
-        );
-
+        document.getElementById("saveButton");
 
     const savedMessage =
-        document.getElementById(
-            "savedMessage"
-        );
+        document.getElementById("savedMessage");
 
 
-
-    /* =========================
-       작성 예시 보기 / 접기
-    ========================= */
+    /* 작성 예시 열기 */
 
     exampleToggle.addEventListener(
         "click",
         function () {
 
             const opened =
-                exampleArea
-                    .classList
-                    .toggle(
-                        "open"
-                    );
-
+                exampleArea.classList.toggle("open");
 
             if (opened) {
 
@@ -1355,14 +1036,10 @@
     );
 
 
-
-    /* =========================
-       오늘 날짜
-    ========================= */
+    /* 오늘 날짜 */
 
     const now =
         new Date();
-
 
     const today =
         [
@@ -1370,83 +1047,58 @@
 
             String(
                 now.getMonth() + 1
-            ).padStart(
-                2,
-                "0"
-            ),
+            ).padStart(2, "0"),
 
             String(
                 now.getDate()
-            ).padStart(
-                2,
-                "0"
-            )
-        ]
-        .join("-");
-
+            ).padStart(2, "0")
+        ].join("-");
 
     dateInput.value =
         today;
 
 
-
-    /* =========================
-       저장한 내용 불러오기
-    ========================= */
+    /* 기존 저장 내용 불러오기 */
 
     const saved =
         localStorage.getItem(
             "palmProfile"
         );
 
-
     if (saved) {
 
         try {
 
             const data =
-                JSON.parse(
-                    saved
-                );
-
+                JSON.parse(saved);
 
             nameInput.value =
                 data.name || "";
 
-
             ageInput.value =
                 data.age || "";
-
 
             contactInput.value =
                 data.contact || "";
 
-
             dateInput.value =
                 data.date || today;
 
-
             reasonInput.value =
                 data.reason || "";
-
 
             drawingThoughtInput.value =
                 data.drawingThought || "";
 
 
-            if (
-                data.gender
-            ) {
+            if (data.gender) {
 
                 const genderInput =
                     document.querySelector(
                         `input[name="gender"][value="${data.gender}"]`
                     );
 
-
-                if (
-                    genderInput
-                ) {
+                if (genderInput) {
 
                     genderInput.checked =
                         true;
@@ -1467,11 +1119,8 @@
                         'input[name="topics"]'
                     );
 
-
                 topicInputs.forEach(
-                    function (
-                        checkbox
-                    ) {
+                    function (checkbox) {
 
                         if (
                             data.topics.includes(
@@ -1489,10 +1138,7 @@
 
             }
 
-
-        } catch (
-            error
-        ) {
+        } catch (error) {
 
             console.log(
                 "저장된 정보 읽기 실패",
@@ -1504,15 +1150,11 @@
     }
 
 
-
-    /* =========================
-       저장하기
-    ========================= */
+    /* 저장 */
 
     saveButton.addEventListener(
         "click",
         function () {
-
 
             const gender =
                 document.querySelector(
@@ -1521,23 +1163,21 @@
 
 
             if (
-                !nameInput
-                    .value
-                    .trim()
+                !nameInput.value.trim()
             ) {
 
                 alert(
                     "성명을 입력해주세요."
                 );
 
+                nameInput.focus();
+
                 return;
 
             }
 
 
-            if (
-                !gender
-            ) {
+            if (!gender) {
 
                 alert(
                     "성별을 선택해주세요."
@@ -1556,6 +1196,23 @@
                     "연령을 입력해주세요."
                 );
 
+                ageInput.focus();
+
+                return;
+
+            }
+
+
+            if (
+                !contactInput.value.trim()
+            ) {
+
+                alert(
+                    "연락처를 입력해주세요."
+                );
+
+                contactInput.focus();
+
                 return;
 
             }
@@ -1566,8 +1223,7 @@
                     document.querySelectorAll(
                         'input[name="topics"]:checked'
                     )
-                )
-                .map(
+                ).map(
                     checkbox =>
                         checkbox.value
                 );
@@ -1576,9 +1232,7 @@
             const profileData = {
 
                 name:
-                    nameInput
-                        .value
-                        .trim(),
+                    nameInput.value.trim(),
 
                 gender:
                     gender.value,
@@ -1587,9 +1241,7 @@
                     ageInput.value,
 
                 contact:
-                    contactInput
-                        .value
-                        .trim(),
+                    contactInput.value.trim(),
 
                 date:
                     dateInput.value,
@@ -1598,14 +1250,10 @@
                     selectedTopics,
 
                 reason:
-                    reasonInput
-                        .value
-                        .trim(),
+                    reasonInput.value.trim(),
 
                 drawingThought:
-                    drawingThoughtInput
-                        .value
-                        .trim()
+                    drawingThoughtInput.value.trim()
 
             };
 
@@ -1623,11 +1271,8 @@
 
 
             savedMessage.scrollIntoView({
-                behavior:
-                    "smooth",
-
-                block:
-                    "center"
+                behavior: "smooth",
+                block: "center"
             });
 
 
@@ -1645,7 +1290,6 @@
     );
 
 </script>
-
 
 </body>
 
