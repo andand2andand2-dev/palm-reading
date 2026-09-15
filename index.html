@@ -12,6 +12,7 @@
     <title>손금 봐드립니다</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -25,9 +26,9 @@
                 sans-serif;
 
             background: #fffaf0;
+
             color: #27221c;
         }
-
 
         .container {
             width: 100%;
@@ -48,14 +49,18 @@
 
         .top-decoration {
             display: flex;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
+
             align-items: center;
 
-            padding: 0 15px;
+            padding:
+                0
+                15px;
 
             font-size: 44px;
         }
-
 
         .title {
             text-align: center;
@@ -66,13 +71,13 @@
                 14px;
 
             font-size: 52px;
+
             font-weight: 900;
 
             line-height: 1.05;
 
             letter-spacing: -3px;
         }
-
 
         .green-badge {
             width: fit-content;
@@ -90,11 +95,11 @@
             background: #d9e9bd;
 
             font-size: 19px;
+
             font-weight: 900;
 
             text-align: center;
         }
-
 
         .main-hand {
             text-align: center;
@@ -105,7 +110,6 @@
                 10px
                 0;
         }
-
 
         .intro {
             text-align: center;
@@ -119,7 +123,7 @@
 
 
         /* =========================
-           공통 카드
+           카드
         ========================= */
 
         .card {
@@ -140,7 +144,6 @@
                 rgba(0, 0, 0, 0.07);
         }
 
-
         .card-title {
             text-align: center;
 
@@ -150,12 +153,13 @@
                 15px;
 
             font-size: 24px;
+
             font-weight: 900;
         }
 
 
         /* =========================
-           손금 위치 토글
+           손금 위치 보기
         ========================= */
 
         #guideToggle {
@@ -176,16 +180,16 @@
             color: #252019;
 
             font-size: 17px;
+
             font-weight: 900;
 
             cursor: pointer;
         }
 
-
-        #guideToggle:hover {
-            transform: translateY(-1px);
+        #guideToggle:active {
+            transform:
+                translateY(2px);
         }
-
 
         #guideArea {
             display: none;
@@ -193,11 +197,9 @@
             margin-top: 18px;
         }
 
-
         #guideArea.open {
             display: block;
         }
-
 
         .guide-text {
             text-align: center;
@@ -210,7 +212,6 @@
 
             margin-bottom: 15px;
         }
-
 
         .guide-image {
             display: block;
@@ -233,19 +234,17 @@
             margin-bottom: 20px;
         }
 
-
         label {
             display: block;
 
             margin-bottom: 8px;
 
             font-size: 15px;
+
             font-weight: 900;
         }
 
-
-        select,
-        input[type="file"] {
+        select {
             width: 100%;
 
             padding:
@@ -265,7 +264,6 @@
             outline: none;
         }
 
-
         .photo-tip {
             margin-bottom: 15px;
 
@@ -280,9 +278,101 @@
             line-height: 1.6;
 
             font-size: 13px;
+
             font-weight: 700;
         }
 
+
+        /* =========================
+           카메라 / 앨범
+        ========================= */
+
+        .hidden-input {
+            display: none;
+        }
+
+        .camera-button {
+            display: block;
+
+            width: 100%;
+
+            padding: 17px;
+
+            text-align: center;
+
+            border:
+                3px solid
+                #28231e;
+
+            border-radius: 18px;
+
+            background: #bfe0ff;
+
+            font-size: 18px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            margin-bottom: 10px;
+
+            box-shadow:
+                0 5px 0
+                #85b9e6;
+        }
+
+        .camera-button:active {
+            transform:
+                translateY(2px);
+
+            box-shadow:
+                0 3px 0
+                #85b9e6;
+        }
+
+        .gallery-button {
+            display: block;
+
+            width: 100%;
+
+            padding: 14px;
+
+            text-align: center;
+
+            border:
+                3px solid
+                #28231e;
+
+            border-radius: 18px;
+
+            background: #e2efcb;
+
+            font-size: 15px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+        }
+
+        #selectedMessage {
+            display: none;
+
+            margin-top: 13px;
+
+            padding:
+                10px
+                13px;
+
+            background: #f4f1e9;
+
+            border-radius: 14px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            text-align: center;
+        }
 
         #preview {
             display: none;
@@ -300,6 +390,8 @@
                 #28231e;
 
             border-radius: 20px;
+
+            background: #f5f5f5;
         }
 
 
@@ -324,7 +416,8 @@
 
             color: #211c16;
 
-            font-size: 28px;
+            font-size: 27px;
+
             font-weight: 900;
 
             cursor: pointer;
@@ -333,7 +426,6 @@
                 0 6px 0
                 #d7af35;
         }
-
 
         #checkButton:active {
             transform:
@@ -344,28 +436,26 @@
                 #d7af35;
         }
 
-
         #checkButton:disabled {
             opacity: 0.55;
+
             cursor: default;
         }
 
 
         /* =========================
-           결과 전체
+           결과
         ========================= */
 
         #resultArea {
             display: none;
         }
 
-
         .result-header {
             text-align: center;
 
             margin-bottom: 18px;
         }
-
 
         .result-header h2 {
             margin:
@@ -374,9 +464,9 @@
                 8px;
 
             font-size: 30px;
+
             font-weight: 900;
         }
-
 
         .result-header p {
             margin: 0;
@@ -386,11 +476,6 @@
             font-size: 14px;
         }
 
-
-        /* =========================
-           개별 결과 카드
-        ========================= */
-
         .analysis-card {
             border:
                 3px solid
@@ -398,8 +483,7 @@
 
             border-radius: 24px;
 
-            padding:
-                19px;
+            padding: 19px;
 
             margin-bottom: 16px;
 
@@ -410,7 +494,6 @@
                 rgba(0, 0, 0, 0.07);
         }
 
-
         .analysis-card h3 {
             margin:
                 0
@@ -418,39 +501,33 @@
                 15px;
 
             font-size: 22px;
+
             font-weight: 900;
         }
-
 
         .heart-card {
             background: #fff0ed;
         }
 
-
         .head-card {
             background: #eef6ff;
         }
-
 
         .life-card {
             background: #eff8e8;
         }
 
-
         .fate-card {
             background: #f3edff;
         }
-
 
         .summary-card {
             background: #fff4c9;
         }
 
-
         .photo-card {
             background: #f4f4ef;
         }
-
 
         .mini-label {
             display: inline-block;
@@ -471,19 +548,17 @@
             border-radius: 999px;
 
             font-size: 13px;
+
             font-weight: 900;
         }
 
-
         .observation-label {
-            background: #fff;
+            background: white;
         }
-
 
         .direction-label {
             background: #d9e9bd;
         }
-
 
         .analysis-text {
             margin:
@@ -509,7 +584,6 @@
                 15px;
         }
 
-
         .loading-hand {
             font-size: 60px;
 
@@ -519,7 +593,6 @@
                 ease-in-out
                 infinite alternate;
         }
-
 
         @keyframes floating {
 
@@ -535,12 +608,118 @@
 
         }
 
-
         .loading-text {
             margin-top: 15px;
 
             font-size: 17px;
+
             font-weight: 900;
+        }
+
+
+        /* =========================
+           다음 페이지 버튼
+        ========================= */
+
+        .profile-next-button {
+            display: block;
+
+            width: 100%;
+
+            margin-top: 22px;
+
+            padding:
+                17px
+                18px;
+
+            border:
+                3px solid
+                #28231e;
+
+            border-radius: 999px;
+
+            background: #ffb7bd;
+
+            color: #211c16;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            box-shadow:
+                0 5px 0
+                #d88991;
+        }
+
+        .profile-next-button:active {
+            transform:
+                translateY(2px);
+
+            box-shadow:
+                0 3px 0
+                #d88991;
+        }
+
+
+        /* =========================
+           공유 버튼
+        ========================= */
+
+        #shareButton {
+            width: 100%;
+
+            margin-top: 14px;
+
+            padding:
+                16px
+                18px;
+
+            border:
+                3px solid
+                #28231e;
+
+            border-radius: 999px;
+
+            background: #cfe5bd;
+
+            color: #211c16;
+
+            font-size: 18px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 5px 0
+                #9eb67e;
+        }
+
+        #shareButton:active {
+            transform:
+                translateY(2px);
+
+            box-shadow:
+                0 3px 0
+                #9eb67e;
+        }
+
+        #shareMessage {
+            display: none;
+
+            margin-top: 12px;
+
+            text-align: center;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: #5e7550;
         }
 
 
@@ -570,17 +749,21 @@
             line-height: 1.7;
         }
 
-
         .bottom-icons {
             display: flex;
 
-            justify-content: space-around;
+            justify-content:
+                space-around;
 
             margin-top: 20px;
 
             font-size: 38px;
         }
 
+
+        /* =========================
+           모바일
+        ========================= */
 
         @media (
             max-width: 520px
@@ -590,19 +773,20 @@
                 font-size: 42px;
             }
 
-
             .green-badge {
                 font-size: 16px;
             }
-
 
             .main-hand {
                 font-size: 80px;
             }
 
-
             #checkButton {
-                font-size: 24px;
+                font-size: 23px;
+            }
+
+            .top-decoration {
+                font-size: 37px;
             }
 
         }
@@ -619,54 +803,72 @@
     <!-- 상단 -->
 
     <div class="top-decoration">
+
         <span>👍</span>
+
         <span>✨</span>
+
         <span>✌️</span>
+
     </div>
 
 
     <div class="title">
+
         손금<br>
         봐드립니다
+
     </div>
 
 
     <div class="green-badge">
+
         성향 · 진로 · 인간관계 · 연애운
+
     </div>
 
 
     <div class="main-hand">
+
         ✋
+
     </div>
 
 
     <div class="intro">
+
         손바닥 사진 한 장으로<br>
         눈에 보이는 손금의 특징을 살펴봐요.
+
     </div>
 
 
 
-    <!-- 손금 위치 보기 -->
+    <!-- 손금 위치 -->
 
     <div class="card">
 
         <h2 class="card-title">
+
             손금이 어디 있는지 궁금해요?
+
         </h2>
 
 
         <button id="guideToggle">
+
             👀 손금 위치 보기
+
         </button>
 
 
         <div id="guideArea">
 
             <p class="guide-text">
+
                 감정선 · 두뇌선 · 생명선 · 운명선의
                 대략적인 위치를 참고해보세요.
+
             </p>
 
 
@@ -687,35 +889,49 @@
     <div class="card">
 
         <h2 class="card-title">
+
             내 손금 보기
+
         </h2>
 
 
         <div class="photo-tip">
-            📸 손바닥 전체가 보이도록 찍고,
-            손목부터 손가락 아래까지 선명하게 나오면 좋아요.
+
+            📸 밝은 곳에서 손바닥을 쫙 펴고,
+            손목부터 손가락 아래까지 잘 보이게 찍어주세요.
+
         </div>
 
 
         <div class="field">
 
             <label for="hand">
+
                 사진 속 손
+
             </label>
 
 
             <select id="hand">
 
                 <option value="">
+
                     선택해주세요
+
                 </option>
+
 
                 <option value="right">
+
                     오른손
+
                 </option>
 
+
                 <option value="left">
+
                     왼손
+
                 </option>
 
             </select>
@@ -727,22 +943,32 @@
         <div class="field">
 
             <label for="dominantHand">
+
                 평소 주로 사용하는 손
+
             </label>
 
 
             <select id="dominantHand">
 
                 <option value="">
+
                     선택해주세요
+
                 </option>
+
 
                 <option value="right">
+
                     오른손잡이
+
                 </option>
 
+
                 <option value="left">
+
                     왼손잡이
+
                 </option>
 
             </select>
@@ -751,18 +977,59 @@
 
 
 
+        <!-- 사진 -->
+
         <div class="field">
 
-            <label for="photo">
+            <label>
+
                 손바닥 사진
+
             </label>
 
 
             <input
                 type="file"
-                id="photo"
-                accept="image/jpeg,image/png,image/webp"
+                id="cameraInput"
+                class="hidden-input"
+                accept="image/*"
+                capture="environment"
             >
+
+
+            <label
+                for="cameraInput"
+                class="camera-button"
+            >
+
+                📷 바로 촬영하기
+
+            </label>
+
+
+            <input
+                type="file"
+                id="galleryInput"
+                class="hidden-input"
+                accept="image/*"
+            >
+
+
+            <label
+                for="galleryInput"
+                class="gallery-button"
+            >
+
+                🖼️ 앨범에서 선택
+
+            </label>
+
+
+            <div id="selectedMessage">
+
+                사진이 선택되었습니다 👍
+
+            </div>
 
 
             <img
@@ -775,7 +1042,9 @@
 
 
         <button id="checkButton">
+
             편하게 알아보세요
+
         </button>
 
     </div>
@@ -789,11 +1058,16 @@
         <div class="result-header">
 
             <h2>
+
                 🔮 내 손금 결과
+
             </h2>
 
+
             <p>
+
                 사진에서 확인되는 특징을 기준으로 정리했어요.
+
             </p>
 
         </div>
@@ -804,6 +1078,38 @@
     </div>
 
 
+
+    <!-- 다음 페이지 -->
+
+    <a
+        href="/profile.html"
+        class="profile-next-button"
+    >
+
+        💗 다음 단계로 →
+
+    </a>
+
+
+
+    <!-- 공유 -->
+
+    <button id="shareButton">
+
+        📤 친구에게 공유하기
+
+    </button>
+
+
+    <div id="shareMessage">
+
+        링크를 복사했어요! 👍
+
+    </div>
+
+
+
+    <!-- 안내 -->
 
     <div class="notice">
 
@@ -830,15 +1136,27 @@
 
 <script>
 
-    const photo =
+    const cameraInput =
         document.getElementById(
-            "photo"
+            "cameraInput"
+        );
+
+
+    const galleryInput =
+        document.getElementById(
+            "galleryInput"
         );
 
 
     const preview =
         document.getElementById(
             "preview"
+        );
+
+
+    const selectedMessage =
+        document.getElementById(
+            "selectedMessage"
         );
 
 
@@ -884,9 +1202,25 @@
         );
 
 
+    const shareButton =
+        document.getElementById(
+            "shareButton"
+        );
+
+
+    const shareMessage =
+        document.getElementById(
+            "shareMessage"
+        );
+
+
+    let selectedFile =
+        null;
+
+
 
     /* =========================
-       손금 위치 펼치기 / 접기
+       손금 위치 보기 / 접기
     ========================= */
 
     guideToggle.addEventListener(
@@ -919,29 +1253,61 @@
 
 
     /* =========================
-       사진 미리보기
+       사진 처리
     ========================= */
 
-    photo.addEventListener(
+    function usePhoto(
+        file
+    ) {
+
+        if (!file) {
+
+            return;
+
+        }
+
+
+        selectedFile =
+            file;
+
+
+        preview.src =
+            URL.createObjectURL(
+                file
+            );
+
+
+        preview.style.display =
+            "block";
+
+
+        selectedMessage.style.display =
+            "block";
+
+    }
+
+
+
+    cameraInput.addEventListener(
         "change",
         function () {
 
-            const file =
-                photo.files[0];
+            usePhoto(
+                cameraInput.files[0]
+            );
+
+        }
+    );
 
 
-            if (file) {
 
-                preview.src =
-                    URL.createObjectURL(
-                        file
-                    );
+    galleryInput.addEventListener(
+        "change",
+        function () {
 
-
-                preview.style.display =
-                    "block";
-
-            }
+            usePhoto(
+                galleryInput.files[0]
+            );
 
         }
     );
@@ -949,10 +1315,12 @@
 
 
     /* =========================
-       HTML 안전 처리
+       안전한 HTML 출력
     ========================= */
 
-    function escapeHTML(text) {
+    function escapeHTML(
+        text
+    ) {
 
         const div =
             document.createElement(
@@ -979,11 +1347,13 @@
     ) {
 
         const lines =
-            content
-                .split("\n");
+            content.split(
+                "\n"
+            );
 
 
-        let html = "";
+        let html =
+            "";
 
 
         for (
@@ -1009,15 +1379,20 @@
             ) {
 
                 html += `
+
                     <div
                         class="
                             mini-label
                             observation-label
                         "
                     >
+
                         👀 관찰
+
                     </div>
+
                 `;
+
 
                 continue;
 
@@ -1031,15 +1406,20 @@
             ) {
 
                 html += `
+
                     <div
                         class="
                             mini-label
                             direction-label
                         "
                     >
+
                         💡 해석 방향
+
                     </div>
+
                 `;
+
 
                 continue;
 
@@ -1047,9 +1427,13 @@
 
 
             html += `
+
                 <div class="analysis-text">
+
                     ${escapeHTML(line)}
+
                 </div>
+
             `;
 
         }
@@ -1062,7 +1446,7 @@
 
 
     /* =========================
-       결과 카드 종류
+       카드 종류
     ========================= */
 
     function getCardInfo(
@@ -1076,9 +1460,13 @@
         ) {
 
             return {
-                emoji: "❤️",
+
+                emoji:
+                    "❤️",
+
                 className:
                     "heart-card"
+
             };
 
         }
@@ -1091,9 +1479,13 @@
         ) {
 
             return {
-                emoji: "🧠",
+
+                emoji:
+                    "🧠",
+
                 className:
                     "head-card"
+
             };
 
         }
@@ -1106,9 +1498,13 @@
         ) {
 
             return {
-                emoji: "🌱",
+
+                emoji:
+                    "🌱",
+
                 className:
                     "life-card"
+
             };
 
         }
@@ -1121,9 +1517,13 @@
         ) {
 
             return {
-                emoji: "✨",
+
+                emoji:
+                    "✨",
+
                 className:
                     "fate-card"
+
             };
 
         }
@@ -1136,18 +1536,26 @@
         ) {
 
             return {
-                emoji: "📸",
+
+                emoji:
+                    "📸",
+
                 className:
                     "photo-card"
+
             };
 
         }
 
 
         return {
-            emoji: "🔮",
+
+            emoji:
+                "🔮",
+
             className:
                 "summary-card"
+
         };
 
     }
@@ -1155,8 +1563,7 @@
 
 
     /* =========================
-       Gemini 텍스트 →
-       카드로 변환
+       AI 결과 카드 변환
     ========================= */
 
     function renderAnalysis(
@@ -1167,7 +1574,8 @@
             /\[([^\]]+)\]\s*([\s\S]*?)(?=\n\s*\[[^\]]+\]|$)/g;
 
 
-        const sections = [];
+        const sections =
+            [];
 
 
         let match;
@@ -1176,25 +1584,26 @@
         while (
             (
                 match =
-                    regex.exec(text)
+                    regex.exec(
+                        text
+                    )
             ) !== null
         ) {
 
             sections.push({
 
                 title:
-                    match[1].trim(),
+                    match[1]
+                        .trim(),
 
                 content:
-                    match[2].trim()
+                    match[2]
+                        .trim()
 
             });
 
         }
 
-
-        /* Gemini가 형식을 다르게
-           줬을 경우 원문 출력 */
 
         if (
             sections.length === 0
@@ -1225,12 +1634,14 @@
 
             `;
 
+
             return;
 
         }
 
 
-        let html = "";
+        let html =
+            "";
 
 
         for (
@@ -1256,6 +1667,7 @@
                     <h3>
 
                         ${info.emoji}
+
                         ${escapeHTML(
                             section.title
                         )}
@@ -1289,9 +1701,6 @@
         "click",
         async function () {
 
-            const file =
-                photo.files[0];
-
 
             if (
                 !hand.value
@@ -1310,8 +1719,7 @@
                         "
                     >
 
-                        사진 속 손을
-                        선택해주세요.
+                        사진 속 손을 선택해주세요.
 
                     </div>
 
@@ -1340,8 +1748,7 @@
                         "
                     >
 
-                        평소 주로 사용하는 손을
-                        선택해주세요.
+                        평소 주로 사용하는 손을 선택해주세요.
 
                     </div>
 
@@ -1353,7 +1760,9 @@
             }
 
 
-            if (!file) {
+            if (
+                !selectedFile
+            ) {
 
                 resultArea.style.display =
                     "block";
@@ -1368,8 +1777,7 @@
                         "
                     >
 
-                        손바닥 사진을
-                        먼저 올려주세요.
+                        손바닥 사진을 먼저 찍거나 선택해주세요.
 
                     </div>
 
@@ -1398,7 +1806,9 @@
                     <div
                         class="loading-hand"
                     >
+
                         ✋
+
                     </div>
 
 
@@ -1420,14 +1830,13 @@
                 true;
 
 
-
             const formData =
                 new FormData();
 
 
             formData.append(
                 "photo",
-                file
+                selectedFile
             );
 
 
@@ -1451,11 +1860,13 @@
                         "/upload",
 
                         {
+
                             method:
                                 "POST",
 
                             body:
                                 formData
+
                         }
 
                     );
@@ -1463,7 +1874,6 @@
 
                 const data =
                     await response.json();
-
 
 
                 if (
@@ -1514,8 +1924,7 @@
                         "
                     >
 
-                        분석 중 오류가
-                        발생했습니다.
+                        분석 중 오류가 발생했습니다.
 
                     </div>
 
@@ -1524,9 +1933,81 @@
             }
 
 
-
             checkButton.disabled =
                 false;
+
+        }
+    );
+
+
+
+    /* =========================
+       공유 버튼
+    ========================= */
+
+    shareButton.addEventListener(
+        "click",
+        async function () {
+
+            const shareData = {
+
+                title:
+                    "손금 봐드립니다",
+
+                text:
+                    "내 손금도 한번 봐봐 ✋",
+
+                url:
+                    window.location.href
+
+            };
+
+
+            try {
+
+                if (
+                    navigator.share
+                ) {
+
+                    await navigator.share(
+                        shareData
+                    );
+
+                } else {
+
+                    await navigator
+                        .clipboard
+                        .writeText(
+                            window.location.href
+                        );
+
+
+                    shareMessage.style.display =
+                        "block";
+
+
+                    setTimeout(
+                        function () {
+
+                            shareMessage.style.display =
+                                "none";
+
+                        },
+                        2500
+                    );
+
+                }
+
+            } catch (
+                error
+            ) {
+
+                console.log(
+                    "공유가 취소되었습니다.",
+                    error
+                );
+
+            }
 
         }
     );
