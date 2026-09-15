@@ -38,7 +38,6 @@
             max-width: 760px;
 
             margin: 0 auto;
-
             padding: 24px 16px 70px;
         }
 
@@ -48,7 +47,6 @@
             display: inline-block;
 
             margin-bottom: 24px;
-
             padding: 10px 17px;
 
             border: 2px solid #29241f;
@@ -126,8 +124,9 @@
         /* 작성 예시 */
 
         .example-card {
-            margin-bottom: 25px;
+            width: 100%;
 
+            margin-bottom: 25px;
             padding: 18px;
 
             background: white;
@@ -141,6 +140,8 @@
         }
 
         #exampleToggle {
+            display: block;
+
             width: 100%;
 
             padding: 14px;
@@ -151,6 +152,7 @@
             background: #dcecc8;
             color: #29241f;
 
+            font-family: inherit;
             font-size: 16px;
             font-weight: 900;
 
@@ -182,7 +184,6 @@
             width: 100%;
 
             margin-bottom: 25px;
-
             padding: 22px;
 
             background: white;
@@ -271,7 +272,6 @@
 
         .field {
             width: 100%;
-
             min-width: 0;
 
             margin-bottom: 22px;
@@ -293,7 +293,6 @@
         input[type="text"],
         input[type="number"],
         input[type="tel"],
-        input[type="date"],
         textarea {
             display: block;
 
@@ -315,6 +314,9 @@
             font-size: 16px;
 
             outline: none;
+
+            -webkit-appearance: none;
+            appearance: none;
         }
 
         input::placeholder,
@@ -340,50 +342,19 @@
             line-height: 1.7;
         }
 
-        /* 아이폰 Safari 날짜칸 수정 */
+        /* 작성일 */
 
-        input[type="date"] {
-            display: block;
+        #date {
+            width: 100%;
+            max-width: 100%;
 
-            width: 100% !important;
-            max-width: 100% !important;
-            min-width: 0 !important;
+            background: #f8f7f3;
 
-            box-sizing: border-box;
+            color: #29241f;
 
             text-align: left;
-        }
 
-        input[type="date"]::-webkit-date-and-time-value {
-            display: block;
-
-            width: 100%;
-
-            margin: 0;
-
-            text-align: left;
-        }
-
-        input[type="date"]::-webkit-datetime-edit {
-            padding: 0;
-        }
-
-        /* 두 칸 */
-
-        .two-column {
-            display: grid;
-
-            grid-template-columns:
-                minmax(0, 1fr)
-                minmax(0, 1fr);
-
-            gap: 14px;
-
-            width: 100%;
-        }
-
-        .two-column > .field {
-            min-width: 0;
+            cursor: default;
         }
 
         /* 성별 */
@@ -398,7 +369,6 @@
 
         .choice {
             flex: 1;
-
             min-width: 0;
         }
 
@@ -415,7 +385,6 @@
             min-height: 54px;
 
             margin: 0;
-
             padding: 12px 8px;
 
             border: 2px solid #29241f;
@@ -494,6 +463,8 @@
         /* 종이 안내 */
 
         .paper-box {
+            width: 100%;
+
             padding: 22px 18px;
 
             border: 2px dashed #29241f;
@@ -542,6 +513,8 @@
         /* 저장 버튼 */
 
         #saveButton {
+            display: block;
+
             width: 100%;
 
             margin-top: 5px;
@@ -553,6 +526,8 @@
 
             background: #ffd96e;
             color: #29241f;
+
+            font-family: inherit;
 
             font-size: 20px;
             font-weight: 900;
@@ -640,20 +615,9 @@
                 font-size: 19px;
             }
 
-            .two-column {
-                grid-template-columns:
-                    minmax(0, 1fr);
-            }
-
             .checkbox-grid {
                 grid-template-columns:
                     minmax(0, 1fr);
-            }
-
-            input[type="date"] {
-                width: 100% !important;
-                max-width: 100% !important;
-                min-width: 0 !important;
             }
         }
 
@@ -665,6 +629,8 @@
 
 <div class="container">
 
+
+    <!-- 뒤로가기 -->
 
     <a
         href="/"
@@ -711,7 +677,10 @@
 
     <div class="example-card">
 
-        <button id="exampleToggle">
+        <button
+            type="button"
+            id="exampleToggle"
+        >
             📄 마음 프리뷰 작성 예시 보기
         </button>
 
@@ -768,6 +737,7 @@
                 type="text"
                 id="name"
                 placeholder="이름을 입력해주세요"
+                autocomplete="name"
                 required
             >
 
@@ -852,6 +822,7 @@
                 id="age"
                 min="1"
                 max="120"
+                inputmode="numeric"
                 placeholder="예: 25"
                 required
             >
@@ -868,8 +839,9 @@
             </label>
 
             <input
-                type="date"
+                type="text"
                 id="date"
+                readonly
             >
 
         </div>
@@ -1092,7 +1064,9 @@
         >
 
             <label for="drawingThought">
+
                 그림을 그리기 전에 떠오른 생각
+
                 <span
                     style="
                         font-weight: normal;
@@ -1101,6 +1075,7 @@
                 >
                     (선택)
                 </span>
+
             </label>
 
 
@@ -1116,7 +1091,10 @@
 
     <!-- 저장 -->
 
-    <button id="saveButton">
+    <button
+        type="button"
+        id="saveButton"
+    >
         💛 여기까지 저장하기
     </button>
 
@@ -1176,7 +1154,7 @@
         document.getElementById("savedMessage");
 
 
-    /* 작성 예시 열기 */
+    /* 작성 예시 열기 / 접기 */
 
     exampleToggle.addEventListener(
         "click",
@@ -1207,23 +1185,22 @@
         new Date();
 
     const today =
-        [
-            now.getFullYear(),
-
-            String(
-                now.getMonth() + 1
-            ).padStart(2, "0"),
-
-            String(
-                now.getDate()
-            ).padStart(2, "0")
-        ].join("-");
+        now.getFullYear()
+        + ". "
+        + String(
+            now.getMonth() + 1
+        ).padStart(2, "0")
+        + ". "
+        + String(
+            now.getDate()
+        ).padStart(2, "0")
+        + ".";
 
     dateInput.value =
         today;
 
 
-    /* 저장된 정보 불러오기 */
+    /* 기존 저장 정보 불러오기 */
 
     const saved =
         localStorage.getItem(
@@ -1250,16 +1227,21 @@
                 data.contact || "";
 
 
-            dateInput.value =
-                data.date || today;
-
-
             reasonInput.value =
                 data.reason || "";
 
 
             drawingThoughtInput.value =
                 data.drawingThought || "";
+
+
+            /*
+               작성일은 기존 저장값과 관계없이
+               오늘 날짜를 보여줍니다.
+            */
+
+            dateInput.value =
+                today;
 
 
             if (data.gender) {
