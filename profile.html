@@ -9,229 +9,202 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>손금 봐드립니다</title>
+    <title>마음 프리뷰</title>
 
     <style>
-
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-
             font-family:
                 "Malgun Gothic",
                 "Apple SD Gothic Neo",
                 sans-serif;
 
-            background: #fffaf0;
-
-            color: #27221c;
+            background: #fffdf5;
+            color: #27231e;
         }
 
         .container {
             width: 100%;
-            max-width: 720px;
+            max-width: 760px;
 
             margin: 0 auto;
-
-            padding:
-                25px
-                16px
-                60px;
+            padding: 25px 16px 60px;
         }
 
+        .back-button {
+            display: inline-block;
 
-        /* =========================
-           상단
-        ========================= */
+            margin-bottom: 20px;
+            padding: 10px 16px;
 
-        .top-decoration {
-            display: flex;
-
-            justify-content:
-                space-between;
-
-            align-items: center;
-
-            padding:
-                0
-                15px;
-
-            font-size: 44px;
-        }
-
-        .title {
-            text-align: center;
-
-            margin:
-                10px
-                0
-                14px;
-
-            font-size: 52px;
-
-            font-weight: 900;
-
-            line-height: 1.05;
-
-            letter-spacing: -3px;
-        }
-
-        .green-badge {
-            width: fit-content;
-
-            margin:
-                0 auto
-                22px;
-
-            padding:
-                11px
-                24px;
-
+            border: 2px solid #25211d;
             border-radius: 999px;
 
-            background: #d9e9bd;
+            background: white;
+            color: #25211d;
 
-            font-size: 19px;
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+        .title-wrap {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .title-highlight {
+            display: inline-block;
+
+            background: #ffe991;
+
+            padding: 8px 22px;
+
+            border-radius: 50%;
+
+            transform: rotate(-2deg);
+
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0;
+
+            font-size: 46px;
+            line-height: 1.05;
 
             font-weight: 900;
 
-            text-align: center;
+            letter-spacing: -3px;
+
+            transform: rotate(2deg);
         }
 
-        .main-hand {
-            text-align: center;
+        .subtitle {
+            margin-top: 13px;
 
-            font-size: 100px;
-
-            margin:
-                10px
-                0;
+            font-size: 18px;
+            font-weight: 800;
         }
 
-        .intro {
-            text-align: center;
+        .small-text {
+            margin-top: 7px;
 
-            color: #71685e;
+            color: #777067;
 
-            line-height: 1.7;
-
-            margin-bottom: 28px;
+            font-size: 13px;
+            line-height: 1.6;
         }
 
-
-        /* =========================
-           카드
-        ========================= */
-
-        .card {
+        .preview-card {
             background: white;
 
-            border:
-                3px solid
-                #28231e;
+            padding: 12px;
 
-            border-radius: 26px;
+            border: 3px solid #27231e;
+            border-radius: 25px;
 
-            padding: 20px;
-
-            margin-bottom: 22px;
+            margin-bottom: 28px;
 
             box-shadow:
                 0 7px 0
-                rgba(0, 0, 0, 0.07);
+                rgba(0, 0, 0, 0.06);
         }
 
-        .card-title {
-            text-align: center;
+        .preview-image {
+            display: block;
 
-            margin:
-                0
-                0
-                15px;
-
-            font-size: 24px;
-
-            font-weight: 900;
-        }
-
-
-        /* =========================
-           손금 위치 보기
-        ========================= */
-
-        #guideToggle {
             width: 100%;
+            height: auto;
 
-            border:
-                3px solid
-                #28231e;
+            border-radius: 17px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+
+            background: white;
+
+            border: 3px solid #27231e;
+            border-radius: 25px;
+
+            padding: 20px;
+
+            box-shadow:
+                0 7px 0
+                rgba(0, 0, 0, 0.06);
+        }
+
+        .section-header {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 20px;
+        }
+
+        .number {
+            width: 47px;
+            height: 47px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            font-size: 26px;
+            font-weight: 900;
+
+            border: 2px solid #27231e;
+        }
+
+        .number.green {
+            background: #cee7b4;
+        }
+
+        .number.yellow {
+            background: #ffe483;
+        }
+
+        .section-name {
+            padding: 8px 16px;
 
             border-radius: 999px;
 
-            padding:
-                14px
-                18px;
-
-            background: #cfe5bd;
-
-            color: #252019;
-
-            font-size: 17px;
-
+            font-size: 23px;
             font-weight: 900;
-
-            cursor: pointer;
         }
 
-        #guideToggle:active {
-            transform:
-                translateY(2px);
+        .green-title {
+            background: #dcecc8;
         }
 
-        #guideArea {
-            display: none;
-
-            margin-top: 18px;
+        .yellow-title {
+            background: #fff0ac;
         }
 
-        #guideArea.open {
-            display: block;
-        }
+        .section-description {
+            margin-bottom: 18px;
 
-        .guide-text {
-            text-align: center;
-
-            color: #746b61;
+            color: #6c655d;
 
             font-size: 13px;
-
-            line-height: 1.7;
-
-            margin-bottom: 15px;
+            line-height: 1.6;
         }
-
-        .guide-image {
-            display: block;
-
-            width: 100%;
-
-            border:
-                3px solid
-                #28231e;
-
-            border-radius: 20px;
-        }
-
-
-        /* =========================
-           입력
-        ========================= */
 
         .field {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         label {
@@ -239,558 +212,214 @@
 
             margin-bottom: 8px;
 
-            font-size: 15px;
-
             font-weight: 900;
-        }
-
-        select {
-            width: 100%;
-
-            padding:
-                13px
-                14px;
-
-            border:
-                3px solid
-                #28231e;
-
-            border-radius: 16px;
-
-            background: white;
-
-            font-size: 15px;
-
-            outline: none;
-        }
-
-        .photo-tip {
-            margin-bottom: 15px;
-
-            padding:
-                13px
-                15px;
-
-            background: #fff0b5;
-
-            border-radius: 18px;
-
-            line-height: 1.6;
-
-            font-size: 13px;
-
-            font-weight: 700;
-        }
-
-
-        /* =========================
-           카메라 / 앨범
-        ========================= */
-
-        .hidden-input {
-            display: none;
-        }
-
-        .camera-button {
-            display: block;
-
-            width: 100%;
-
-            padding: 17px;
-
-            text-align: center;
-
-            border:
-                3px solid
-                #28231e;
-
-            border-radius: 18px;
-
-            background: #bfe0ff;
-
-            font-size: 18px;
-
-            font-weight: 900;
-
-            cursor: pointer;
-
-            margin-bottom: 10px;
-
-            box-shadow:
-                0 5px 0
-                #85b9e6;
-        }
-
-        .camera-button:active {
-            transform:
-                translateY(2px);
-
-            box-shadow:
-                0 3px 0
-                #85b9e6;
-        }
-
-        .gallery-button {
-            display: block;
-
-            width: 100%;
-
-            padding: 14px;
-
-            text-align: center;
-
-            border:
-                3px solid
-                #28231e;
-
-            border-radius: 18px;
-
-            background: #e2efcb;
-
-            font-size: 15px;
-
-            font-weight: 900;
-
-            cursor: pointer;
-        }
-
-        #selectedMessage {
-            display: none;
-
-            margin-top: 13px;
-
-            padding:
-                10px
-                13px;
-
-            background: #f4f1e9;
-
-            border-radius: 14px;
-
-            font-size: 13px;
-
-            font-weight: 700;
-
-            text-align: center;
-        }
-
-        #preview {
-            display: none;
-
-            width: 100%;
-
-            max-height: 450px;
-
-            object-fit: contain;
-
-            margin-top: 17px;
-
-            border:
-                3px solid
-                #28231e;
-
-            border-radius: 20px;
-
-            background: #f5f5f5;
-        }
-
-
-        /* =========================
-           분석 버튼
-        ========================= */
-
-        #checkButton {
-            width: 100%;
-
-            padding:
-                17px
-                15px;
-
-            border:
-                3px solid
-                #28231e;
-
-            border-radius: 999px;
-
-            background: #ffd966;
-
-            color: #211c16;
-
-            font-size: 27px;
-
-            font-weight: 900;
-
-            cursor: pointer;
-
-            box-shadow:
-                0 6px 0
-                #d7af35;
-        }
-
-        #checkButton:active {
-            transform:
-                translateY(3px);
-
-            box-shadow:
-                0 3px 0
-                #d7af35;
-        }
-
-        #checkButton:disabled {
-            opacity: 0.55;
-
-            cursor: default;
-        }
-
-
-        /* =========================
-           결과
-        ========================= */
-
-        #resultArea {
-            display: none;
-        }
-
-        .result-header {
-            text-align: center;
-
-            margin-bottom: 18px;
-        }
-
-        .result-header h2 {
-            margin:
-                0
-                0
-                8px;
-
-            font-size: 30px;
-
-            font-weight: 900;
-        }
-
-        .result-header p {
-            margin: 0;
-
-            color: #746b61;
 
             font-size: 14px;
         }
 
-        .analysis-card {
-            border:
-                3px solid
-                #28231e;
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
 
-            border-radius: 24px;
+            padding: 13px 14px;
 
-            padding: 19px;
-
-            margin-bottom: 16px;
+            border: 2px solid #302b26;
+            border-radius: 13px;
 
             background: white;
+
+            font-size: 16px;
+
+            font-family: inherit;
+
+            outline: none;
+        }
+
+        textarea {
+            min-height: 130px;
+
+            resize: vertical;
+
+            line-height: 1.6;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #8aae71;
 
             box-shadow:
-                0 6px 0
-                rgba(0, 0, 0, 0.07);
+                0 0 0 3px
+                rgba(138, 174, 113, 0.14);
         }
 
-        .analysis-card h3 {
-            margin:
-                0
-                0
-                15px;
+        .two-column {
+            display: grid;
 
-            font-size: 22px;
+            grid-template-columns:
+                1fr
+                1fr;
 
-            font-weight: 900;
+            gap: 14px;
         }
 
-        .heart-card {
-            background: #fff0ed;
+        .choice-row {
+            display: flex;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
         }
 
-        .head-card {
-            background: #eef6ff;
+        .choice {
+            flex: 1;
+
+            min-width: 90px;
         }
 
-        .life-card {
-            background: #eff8e8;
+        .choice input {
+            display: none;
         }
 
-        .fate-card {
-            background: #f3edff;
-        }
-
-        .summary-card {
-            background: #fff4c9;
-        }
-
-        .photo-card {
-            background: #f4f4ef;
-        }
-
-        .mini-label {
-            display: inline-block;
-
-            margin:
-                9px
-                0
-                7px;
-
-            padding:
-                6px
-                12px;
-
-            border:
-                2px solid
-                #28231e;
-
-            border-radius: 999px;
-
-            font-size: 13px;
-
-            font-weight: 900;
-        }
-
-        .observation-label {
-            background: white;
-        }
-
-        .direction-label {
-            background: #d9e9bd;
-        }
-
-        .analysis-text {
-            margin:
-                4px
-                0
-                9px;
-
-            line-height: 1.8;
-
-            font-size: 15px;
-        }
-
-
-        /* =========================
-           로딩
-        ========================= */
-
-        .loading-box {
-            text-align: center;
-
-            padding:
-                30px
-                15px;
-        }
-
-        .loading-hand {
-            font-size: 60px;
-
-            animation:
-                floating
-                1.1s
-                ease-in-out
-                infinite alternate;
-        }
-
-        @keyframes floating {
-
-            from {
-                transform:
-                    translateY(0);
-            }
-
-            to {
-                transform:
-                    translateY(-8px);
-            }
-
-        }
-
-        .loading-text {
-            margin-top: 15px;
-
-            font-size: 17px;
-
-            font-weight: 900;
-        }
-
-
-        /* =========================
-           다음 페이지 버튼
-        ========================= */
-
-        .profile-next-button {
+        .choice label {
             display: block;
 
-            width: 100%;
+            margin: 0;
 
-            margin-top: 22px;
+            padding: 12px;
 
-            padding:
-                17px
-                18px;
-
-            border:
-                3px solid
-                #28231e;
-
-            border-radius: 999px;
-
-            background: #ffb7bd;
-
-            color: #211c16;
+            border: 2px solid #27231e;
+            border-radius: 13px;
 
             text-align: center;
 
-            text-decoration: none;
+            background: white;
 
-            font-size: 20px;
-
-            font-weight: 900;
-
-            box-shadow:
-                0 5px 0
-                #d88991;
+            cursor: pointer;
         }
 
-        .profile-next-button:active {
-            transform:
-                translateY(2px);
-
-            box-shadow:
-                0 3px 0
-                #d88991;
+        .choice input:checked + label {
+            background: #dcecc8;
         }
 
+        .checkbox-grid {
+            display: grid;
 
-        /* =========================
-           공유 버튼
-        ========================= */
+            grid-template-columns:
+                repeat(2, 1fr);
 
-        #shareButton {
+            gap: 10px;
+
+            margin-bottom: 18px;
+        }
+
+        .check-item {
+            border: 2px solid #27231e;
+
+            border-radius: 13px;
+
+            padding: 12px;
+
+            background: white;
+
+            cursor: pointer;
+
+            font-weight: 800;
+        }
+
+        .check-item input {
+            margin-right: 6px;
+
+            transform: scale(1.2);
+        }
+
+        .privacy-note {
+            background: #ffeeb0;
+
+            padding: 13px 15px;
+
+            border-radius: 16px;
+
+            margin-top: 10px;
+
+            font-size: 12px;
+
+            color: #625b53;
+
+            line-height: 1.7;
+        }
+
+        #saveButton {
             width: 100%;
 
-            margin-top: 14px;
+            margin-top: 18px;
 
-            padding:
-                16px
-                18px;
+            padding: 17px 18px;
 
-            border:
-                3px solid
-                #28231e;
-
+            border: 3px solid #27231e;
             border-radius: 999px;
 
-            background: #cfe5bd;
+            background: #ffd96e;
 
-            color: #211c16;
+            color: #27231e;
 
-            font-size: 18px;
-
+            font-size: 21px;
             font-weight: 900;
 
             cursor: pointer;
 
             box-shadow:
                 0 5px 0
-                #9eb67e;
+                #d4ae39;
         }
 
-        #shareButton:active {
-            transform:
-                translateY(2px);
+        #saveButton:active {
+            transform: translateY(2px);
 
             box-shadow:
                 0 3px 0
-                #9eb67e;
+                #d4ae39;
         }
 
-        #shareMessage {
+        #savedMessage {
             display: none;
 
-            margin-top: 12px;
+            margin-top: 15px;
+
+            padding: 14px;
+
+            background: #dcecc8;
+
+            border-radius: 15px;
 
             text-align: center;
 
-            font-size: 13px;
-
-            font-weight: 700;
-
-            color: #5e7550;
+            font-weight: 900;
         }
 
+        @media (max-width: 560px) {
 
-        /* =========================
-           안내
-        ========================= */
-
-        .notice {
-            margin-top: 24px;
-
-            padding:
-                14px
-                16px;
-
-            border:
-                2px dashed
-                #a59c91;
-
-            border-radius: 18px;
-
-            text-align: center;
-
-            color: #776f66;
-
-            font-size: 12px;
-
-            line-height: 1.7;
-        }
-
-        .bottom-icons {
-            display: flex;
-
-            justify-content:
-                space-around;
-
-            margin-top: 20px;
-
-            font-size: 38px;
-        }
-
-
-        /* =========================
-           모바일
-        ========================= */
-
-        @media (
-            max-width: 520px
-        ) {
-
-            .title {
-                font-size: 42px;
+            h1 {
+                font-size: 38px;
             }
 
-            .green-badge {
-                font-size: 16px;
+            .section-name {
+                font-size: 19px;
             }
 
-            .main-hand {
-                font-size: 80px;
+            .two-column {
+                grid-template-columns:
+                    1fr;
             }
 
-            #checkButton {
-                font-size: 23px;
-            }
-
-            .top-decoration {
-                font-size: 37px;
+            .checkbox-grid {
+                grid-template-columns:
+                    1fr;
             }
 
         }
-
     </style>
 </head>
 
@@ -799,1221 +428,628 @@
 
 <div class="container">
 
-
-    <!-- 상단 -->
-
-    <div class="top-decoration">
-
-        <span>👍</span>
-
-        <span>✨</span>
-
-        <span>✌️</span>
-
-    </div>
+    <a
+        href="/"
+        class="back-button"
+    >
+        ← 손금 페이지로
+    </a>
 
 
-    <div class="title">
+    <div class="title-wrap">
 
-        손금<br>
-        봐드립니다
+        <div class="title-highlight">
 
-    </div>
+            <h1>
+                마음 프리뷰 ♡
+            </h1>
 
+        </div>
 
-    <div class="green-badge">
+        <div class="subtitle">
+            손끝에서 시작하는 자기 이해
+        </div>
 
-        성향 · 진로 · 인간관계 · 연애운
-
-    </div>
-
-
-    <div class="main-hand">
-
-        ✋
+        <div class="small-text">
+            손금을 본 뒤 떠오른 생각을
+            천천히 적어보세요.
+        </div>
 
     </div>
 
 
-    <div class="intro">
+    <!-- 마음 프리뷰 이미지 -->
 
-        손바닥 사진 한 장으로<br>
-        눈에 보이는 손금의 특징을 살펴봐요.
+    <div class="preview-card">
+
+        <img
+            src="/mind-preview.png"
+            alt="마음 프리뷰 안내"
+            class="preview-image"
+        >
 
     </div>
 
 
+    <!-- 1 기본 정보 -->
 
-    <!-- 손금 위치 -->
+    <section class="section">
 
-    <div class="card">
+        <div class="section-header">
 
-        <h2 class="card-title">
+            <div class="number green">
+                1
+            </div>
 
-            손금이 어디 있는지 궁금해요?
+            <div
+                class="
+                    section-name
+                    green-title
+                "
+            >
+                기본 정보
+            </div>
 
-        </h2>
-
-
-        <button id="guideToggle">
-
-            👀 손금 위치 보기
-
-        </button>
-
-
-        <div id="guideArea">
-
-            <p class="guide-text">
-
-                감정선 · 두뇌선 · 생명선 · 운명선의
-                대략적인 위치를 참고해보세요.
-
-            </p>
+        </div>
 
 
-            <img
-                src="palm-guide.png"
-                alt="손금 주요선 위치"
-                class="guide-image"
+        <div class="section-description">
+            손금 결과를 돌아보기 전에
+            기본 정보를 입력해주세요.
+        </div>
+
+
+        <div class="field">
+
+            <label for="name">
+                성명
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="이름을 입력해주세요"
             >
 
         </div>
 
-    </div>
-
-
-
-    <!-- 입력 -->
-
-    <div class="card">
-
-        <h2 class="card-title">
-
-            내 손금 보기
-
-        </h2>
-
-
-        <div class="photo-tip">
-
-            📸 밝은 곳에서 손바닥을 쫙 펴고,
-            손목부터 손가락 아래까지 잘 보이게 찍어주세요.
-
-        </div>
-
-
-        <div class="field">
-
-            <label for="hand">
-
-                사진 속 손
-
-            </label>
-
-
-            <select id="hand">
-
-                <option value="">
-
-                    선택해주세요
-
-                </option>
-
-
-                <option value="right">
-
-                    오른손
-
-                </option>
-
-
-                <option value="left">
-
-                    왼손
-
-                </option>
-
-            </select>
-
-        </div>
-
-
-
-        <div class="field">
-
-            <label for="dominantHand">
-
-                평소 주로 사용하는 손
-
-            </label>
-
-
-            <select id="dominantHand">
-
-                <option value="">
-
-                    선택해주세요
-
-                </option>
-
-
-                <option value="right">
-
-                    오른손잡이
-
-                </option>
-
-
-                <option value="left">
-
-                    왼손잡이
-
-                </option>
-
-            </select>
-
-        </div>
-
-
-
-        <!-- 사진 -->
 
         <div class="field">
 
             <label>
-
-                손바닥 사진
-
+                성별
             </label>
 
+            <div class="choice-row">
 
-            <input
-                type="file"
-                id="cameraInput"
-                class="hidden-input"
-                accept="image/*"
-                capture="environment"
-            >
+                <div class="choice">
 
+                    <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="남"
+                    >
 
-            <label
-                for="cameraInput"
-                class="camera-button"
-            >
+                    <label for="male">
+                        남
+                    </label>
 
-                📷 바로 촬영하기
+                </div>
 
-            </label>
+                <div class="choice">
 
+                    <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="여"
+                    >
 
-            <input
-                type="file"
-                id="galleryInput"
-                class="hidden-input"
-                accept="image/*"
-            >
+                    <label for="female">
+                        여
+                    </label>
 
+                </div>
 
-            <label
-                for="galleryInput"
-                class="gallery-button"
-            >
+                <div class="choice">
 
-                🖼️ 앨범에서 선택
+                    <input
+                        type="radio"
+                        id="other"
+                        name="gender"
+                        value="기타"
+                    >
 
-            </label>
+                    <label for="other">
+                        기타
+                    </label>
 
-
-            <div id="selectedMessage">
-
-                사진이 선택되었습니다 👍
+                </div>
 
             </div>
 
+        </div>
 
-            <img
-                id="preview"
-                alt="손바닥 사진 미리보기"
+
+        <div class="two-column">
+
+            <div class="field">
+
+                <label for="age">
+                    연령
+                </label>
+
+                <input
+                    type="number"
+                    id="age"
+                    min="1"
+                    max="120"
+                    placeholder="예: 25"
+                >
+
+            </div>
+
+            <div class="field">
+
+                <label for="date">
+                    작성일
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="field">
+
+            <label for="contact">
+                연락처 (선택)
+            </label>
+
+            <input
+                type="tel"
+                id="contact"
+                placeholder="필요한 경우에만 입력해주세요"
             >
 
         </div>
 
 
+        <div class="privacy-note">
 
-        <button id="checkButton">
+            🔒 현재 입력 내용은 서버나 데이터베이스에 저장하지 않고
+            이 기기의 브라우저에만 임시 저장합니다.
+            연락처가 필요하지 않다면 비워두어도 됩니다.
 
-            편하게 알아보세요
+        </div>
 
-        </button>
-
-    </div>
-
-
-
-    <!-- 결과 -->
-
-    <div id="resultArea">
-
-        <div class="result-header">
-
-            <h2>
-
-                🔮 내 손금 결과
-
-            </h2>
+    </section>
 
 
-            <p>
+    <!-- 2 손금에서 떠오른 나 -->
 
-                사진에서 확인되는 특징을 기준으로 정리했어요.
+    <section class="section">
 
-            </p>
+        <div class="section-header">
+
+            <div class="number yellow">
+                2
+            </div>
+
+            <div
+                class="
+                    section-name
+                    yellow-title
+                "
+            >
+                손금에서 떠오른 나
+            </div>
 
         </div>
 
 
-        <div id="result"></div>
+        <div class="section-description">
 
-    </div>
+            오늘 손금 결과를 보면서
+            가장 생각해보게 된 것은 무엇인가요?
+            여러 개 선택해도 괜찮아요.
 
-
-
-    <!-- 다음 페이지 -->
-
-    <a
-        href="/profile.html"
-        class="profile-next-button"
-    >
-
-        💗 다음 단계로 →
-
-    </a>
+        </div>
 
 
+        <div class="checkbox-grid">
 
-    <!-- 공유 -->
+            <label class="check-item">
 
-    <button id="shareButton">
+                <input
+                    type="checkbox"
+                    value="나의 성향"
+                    name="topics"
+                >
 
-        📤 친구에게 공유하기
+                나의 성향
+
+            </label>
+
+
+            <label class="check-item">
+
+                <input
+                    type="checkbox"
+                    value="감정·관계"
+                    name="topics"
+                >
+
+                감정 · 관계
+
+            </label>
+
+
+            <label class="check-item">
+
+                <input
+                    type="checkbox"
+                    value="현재의 고민"
+                    name="topics"
+                >
+
+                현재의 고민
+
+            </label>
+
+
+            <label class="check-item">
+
+                <input
+                    type="checkbox"
+                    value="진로·미래"
+                    name="topics"
+                >
+
+                진로 · 미래
+
+            </label>
+
+
+            <label class="check-item">
+
+                <input
+                    type="checkbox"
+                    value="삶의 방향"
+                    name="topics"
+                >
+
+                삶의 방향
+
+            </label>
+
+
+            <label class="check-item">
+
+                <input
+                    type="checkbox"
+                    value="기타"
+                    name="topics"
+                >
+
+                기타
+
+            </label>
+
+        </div>
+
+
+        <div class="field">
+
+            <label for="reason">
+                그렇게 생각한 이유는 무엇인가요?
+            </label>
+
+            <textarea
+                id="reason"
+                placeholder="손금 결과를 보며 떠오른 생각을 자유롭게 적어주세요."
+            ></textarea>
+
+        </div>
+
+    </section>
+
+
+    <button id="saveButton">
+
+        💛 여기까지 저장하기
 
     </button>
 
 
-    <div id="shareMessage">
+    <div id="savedMessage">
 
-        링크를 복사했어요! 👍
-
-    </div>
-
-
-
-    <!-- 안내 -->
-
-    <div class="notice">
-
-        손금 풀이는 과학적인 진단이나
-        미래 예측이 아닌 오락 목적의 해석입니다.
+        입력한 내용을 저장했어요 👍
 
     </div>
-
-
-    <div class="bottom-icons">
-
-        <span>💖</span>
-
-        <span>👌</span>
-
-        <span>👉</span>
-
-    </div>
-
 
 </div>
 
 
-
 <script>
 
-    const cameraInput =
+    const nameInput =
         document.getElementById(
-            "cameraInput"
+            "name"
+        );
+
+    const ageInput =
+        document.getElementById(
+            "age"
+        );
+
+    const contactInput =
+        document.getElementById(
+            "contact"
+        );
+
+    const dateInput =
+        document.getElementById(
+            "date"
+        );
+
+    const reasonInput =
+        document.getElementById(
+            "reason"
+        );
+
+    const saveButton =
+        document.getElementById(
+            "saveButton"
+        );
+
+    const savedMessage =
+        document.getElementById(
+            "savedMessage"
         );
 
 
-    const galleryInput =
-        document.getElementById(
-            "galleryInput"
+    /* 오늘 날짜 */
+
+    const now =
+        new Date();
+
+    const localToday =
+        [
+            now.getFullYear(),
+
+            String(
+                now.getMonth() + 1
+            ).padStart(2, "0"),
+
+            String(
+                now.getDate()
+            ).padStart(2, "0")
+        ]
+        .join("-");
+
+    dateInput.value =
+        localToday;
+
+
+    /* 기존 저장 내용 불러오기 */
+
+    const saved =
+        localStorage.getItem(
+            "palmProfile"
         );
 
 
-    const preview =
-        document.getElementById(
-            "preview"
-        );
+    if (saved) {
 
+        try {
 
-    const selectedMessage =
-        document.getElementById(
-            "selectedMessage"
-        );
-
-
-    const hand =
-        document.getElementById(
-            "hand"
-        );
-
-
-    const dominantHand =
-        document.getElementById(
-            "dominantHand"
-        );
-
-
-    const checkButton =
-        document.getElementById(
-            "checkButton"
-        );
-
-
-    const resultArea =
-        document.getElementById(
-            "resultArea"
-        );
-
-
-    const result =
-        document.getElementById(
-            "result"
-        );
-
-
-    const guideToggle =
-        document.getElementById(
-            "guideToggle"
-        );
-
-
-    const guideArea =
-        document.getElementById(
-            "guideArea"
-        );
-
-
-    const shareButton =
-        document.getElementById(
-            "shareButton"
-        );
-
-
-    const shareMessage =
-        document.getElementById(
-            "shareMessage"
-        );
-
-
-    let selectedFile =
-        null;
-
-
-
-    /* =========================
-       손금 위치 보기 / 접기
-    ========================= */
-
-    guideToggle.addEventListener(
-        "click",
-        function () {
-
-            const opened =
-                guideArea
-                    .classList
-                    .toggle(
-                        "open"
-                    );
-
-
-            if (opened) {
-
-                guideToggle.textContent =
-                    "🙈 손금 위치 접기";
-
-            } else {
-
-                guideToggle.textContent =
-                    "👀 손금 위치 보기";
-
-            }
-
-        }
-    );
-
-
-
-    /* =========================
-       사진 처리
-    ========================= */
-
-    function usePhoto(
-        file
-    ) {
-
-        if (!file) {
-
-            return;
-
-        }
-
-
-        selectedFile =
-            file;
-
-
-        preview.src =
-            URL.createObjectURL(
-                file
-            );
-
-
-        preview.style.display =
-            "block";
-
-
-        selectedMessage.style.display =
-            "block";
-
-    }
-
-
-
-    cameraInput.addEventListener(
-        "change",
-        function () {
-
-            usePhoto(
-                cameraInput.files[0]
-            );
-
-        }
-    );
-
-
-
-    galleryInput.addEventListener(
-        "change",
-        function () {
-
-            usePhoto(
-                galleryInput.files[0]
-            );
-
-        }
-    );
-
-
-
-    /* =========================
-       안전한 HTML 출력
-    ========================= */
-
-    function escapeHTML(
-        text
-    ) {
-
-        const div =
-            document.createElement(
-                "div"
-            );
-
-
-        div.textContent =
-            text ?? "";
-
-
-        return div.innerHTML;
-
-    }
-
-
-
-    /* =========================
-       결과 내용 꾸미기
-    ========================= */
-
-    function formatContent(
-        content
-    ) {
-
-        const lines =
-            content.split(
-                "\n"
-            );
-
-
-        let html =
-            "";
-
-
-        for (
-            const originalLine
-            of lines
-        ) {
-
-            const line =
-                originalLine.trim();
-
-
-            if (!line) {
-
-                continue;
-
-            }
-
-
-            if (
-                line === "관찰:"
-                ||
-                line === "관찰"
-            ) {
-
-                html += `
-
-                    <div
-                        class="
-                            mini-label
-                            observation-label
-                        "
-                    >
-
-                        👀 관찰
-
-                    </div>
-
-                `;
-
-
-                continue;
-
-            }
-
-
-            if (
-                line === "해석 방향:"
-                ||
-                line === "해석 방향"
-            ) {
-
-                html += `
-
-                    <div
-                        class="
-                            mini-label
-                            direction-label
-                        "
-                    >
-
-                        💡 해석 방향
-
-                    </div>
-
-                `;
-
-
-                continue;
-
-            }
-
-
-            html += `
-
-                <div class="analysis-text">
-
-                    ${escapeHTML(line)}
-
-                </div>
-
-            `;
-
-        }
-
-
-        return html;
-
-    }
-
-
-
-    /* =========================
-       카드 종류
-    ========================= */
-
-    function getCardInfo(
-        title
-    ) {
-
-        if (
-            title.includes(
-                "감정선"
-            )
-        ) {
-
-            return {
-
-                emoji:
-                    "❤️",
-
-                className:
-                    "heart-card"
-
-            };
-
-        }
-
-
-        if (
-            title.includes(
-                "두뇌선"
-            )
-        ) {
-
-            return {
-
-                emoji:
-                    "🧠",
-
-                className:
-                    "head-card"
-
-            };
-
-        }
-
-
-        if (
-            title.includes(
-                "생명선"
-            )
-        ) {
-
-            return {
-
-                emoji:
-                    "🌱",
-
-                className:
-                    "life-card"
-
-            };
-
-        }
-
-
-        if (
-            title.includes(
-                "운명선"
-            )
-        ) {
-
-            return {
-
-                emoji:
-                    "✨",
-
-                className:
-                    "fate-card"
-
-            };
-
-        }
-
-
-        if (
-            title.includes(
-                "사진"
-            )
-        ) {
-
-            return {
-
-                emoji:
-                    "📸",
-
-                className:
-                    "photo-card"
-
-            };
-
-        }
-
-
-        return {
-
-            emoji:
-                "🔮",
-
-            className:
-                "summary-card"
-
-        };
-
-    }
-
-
-
-    /* =========================
-       AI 결과 카드 변환
-    ========================= */
-
-    function renderAnalysis(
-        text
-    ) {
-
-        const regex =
-            /\[([^\]]+)\]\s*([\s\S]*?)(?=\n\s*\[[^\]]+\]|$)/g;
-
-
-        const sections =
-            [];
-
-
-        let match;
-
-
-        while (
-            (
-                match =
-                    regex.exec(
-                        text
-                    )
-            ) !== null
-        ) {
-
-            sections.push({
-
-                title:
-                    match[1]
-                        .trim(),
-
-                content:
-                    match[2]
-                        .trim()
-
-            });
-
-        }
-
-
-        if (
-            sections.length === 0
-        ) {
-
-            result.innerHTML = `
-
-                <div
-                    class="
-                        analysis-card
-                        summary-card
-                    "
-                >
-
-                    <div
-                        class="analysis-text"
-                    >
-
-                        ${escapeHTML(text)
-                            .replace(
-                                /\n/g,
-                                "<br>"
-                            )}
-
-                    </div>
-
-                </div>
-
-            `;
-
-
-            return;
-
-        }
-
-
-        let html =
-            "";
-
-
-        for (
-            const section
-            of sections
-        ) {
-
-            const info =
-                getCardInfo(
-                    section.title
+            const data =
+                JSON.parse(
+                    saved
                 );
 
 
-            html += `
-
-                <div
-                    class="
-                        analysis-card
-                        ${info.className}
-                    "
-                >
-
-                    <h3>
-
-                        ${info.emoji}
-
-                        ${escapeHTML(
-                            section.title
-                        )}
-
-                    </h3>
+            nameInput.value =
+                data.name || "";
 
 
-                    ${formatContent(
-                        section.content
-                    )}
-
-                </div>
-
-            `;
-
-        }
+            ageInput.value =
+                data.age || "";
 
 
-        result.innerHTML =
-            html;
-
-    }
+            contactInput.value =
+                data.contact || "";
 
 
-
-    /* =========================
-       분석 버튼
-    ========================= */
-
-    checkButton.addEventListener(
-        "click",
-        async function () {
+            dateInput.value =
+                data.date || localToday;
 
 
-            if (
-                !hand.value
-            ) {
-
-                resultArea.style.display =
-                    "block";
+            reasonInput.value =
+                data.reason || "";
 
 
-                result.innerHTML = `
+            if (data.gender) {
 
-                    <div
-                        class="
-                            analysis-card
-                            summary-card
-                        "
-                    >
-
-                        사진 속 손을 선택해주세요.
-
-                    </div>
-
-                `;
+                const gender =
+                    document.querySelector(
+                        `input[name="gender"][value="${data.gender}"]`
+                    );
 
 
-                return;
+                if (gender) {
+
+                    gender.checked =
+                        true;
+
+                }
 
             }
 
 
             if (
-                !dominantHand.value
+                Array.isArray(
+                    data.topics
+                )
             ) {
 
-                resultArea.style.display =
-                    "block";
+                const checks =
+                    document.querySelectorAll(
+                        'input[name="topics"]'
+                    );
 
 
-                result.innerHTML = `
+                checks.forEach(
+                    function (checkbox) {
 
-                    <div
-                        class="
-                            analysis-card
-                            summary-card
-                        "
-                    >
+                        if (
+                            data.topics.includes(
+                                checkbox.value
+                            )
+                        ) {
 
-                        평소 주로 사용하는 손을 선택해주세요.
-
-                    </div>
-
-                `;
-
-
-                return;
-
-            }
-
-
-            if (
-                !selectedFile
-            ) {
-
-                resultArea.style.display =
-                    "block";
-
-
-                result.innerHTML = `
-
-                    <div
-                        class="
-                            analysis-card
-                            summary-card
-                        "
-                    >
-
-                        손바닥 사진을 먼저 찍거나 선택해주세요.
-
-                    </div>
-
-                `;
-
-
-                return;
-
-            }
-
-
-
-            resultArea.style.display =
-                "block";
-
-
-            result.innerHTML = `
-
-                <div
-                    class="
-                        analysis-card
-                        loading-box
-                    "
-                >
-
-                    <div
-                        class="loading-hand"
-                    >
-
-                        ✋
-
-                    </div>
-
-
-                    <div
-                        class="loading-text"
-                    >
-
-                        손바닥의 손금을
-                        분석 중입니다...
-
-                    </div>
-
-                </div>
-
-            `;
-
-
-            checkButton.disabled =
-                true;
-
-
-            const formData =
-                new FormData();
-
-
-            formData.append(
-                "photo",
-                selectedFile
-            );
-
-
-            formData.append(
-                "hand",
-                hand.value
-            );
-
-
-            formData.append(
-                "dominantHand",
-                dominantHand.value
-            );
-
-
-            try {
-
-                const response =
-                    await fetch(
-
-                        "/upload",
-
-                        {
-
-                            method:
-                                "POST",
-
-                            body:
-                                formData
+                            checkbox.checked =
+                                true;
 
                         }
 
-                    );
+                    }
+                );
 
+            }
 
-                const data =
-                    await response.json();
+        } catch (error) {
 
-
-                if (
-                    data.success
-                ) {
-
-                    renderAnalysis(
-                        data.analysis
-                    );
-
-                } else {
-
-                    result.innerHTML = `
-
-                        <div
-                            class="
-                                analysis-card
-                                summary-card
-                            "
-                        >
-
-                            ${escapeHTML(
-                                data.message
-                            )}
-
-                        </div>
-
-                    `;
-
-                }
-
-
-            } catch (
+            console.log(
+                "저장된 정보 읽기 실패",
                 error
-            ) {
+            );
 
-                console.error(
-                    error
+        }
+
+    }
+
+
+    /* 저장 */
+
+    saveButton.addEventListener(
+        "click",
+        function () {
+
+            const gender =
+                document.querySelector(
+                    'input[name="gender"]:checked'
                 );
 
 
-                result.innerHTML = `
+            if (
+                !nameInput.value.trim()
+            ) {
 
-                    <div
-                        class="
-                            analysis-card
-                            summary-card
-                        "
-                    >
+                alert(
+                    "성명을 입력해주세요."
+                );
 
-                        분석 중 오류가 발생했습니다.
-
-                    </div>
-
-                `;
+                return;
 
             }
 
 
-            checkButton.disabled =
-                false;
+            if (!gender) {
 
-        }
-    );
+                alert(
+                    "성별을 선택해주세요."
+                );
+
+                return;
+
+            }
 
 
+            if (
+                !ageInput.value
+            ) {
 
-    /* =========================
-       공유 버튼
-    ========================= */
+                alert(
+                    "연령을 입력해주세요."
+                );
 
-    shareButton.addEventListener(
-        "click",
-        async function () {
+                return;
 
-            const shareData = {
+            }
 
-                title:
-                    "손금 봐드립니다",
 
-                text:
-                    "내 손금도 한번 봐봐 ✋",
+            const selectedTopics =
+                Array.from(
+                    document.querySelectorAll(
+                        'input[name="topics"]:checked'
+                    )
+                )
+                .map(
+                    checkbox =>
+                        checkbox.value
+                );
 
-                url:
-                    window.location.href
+
+            const profileData = {
+
+                name:
+                    nameInput.value.trim(),
+
+                gender:
+                    gender.value,
+
+                age:
+                    ageInput.value,
+
+                contact:
+                    contactInput.value.trim(),
+
+                date:
+                    dateInput.value,
+
+                topics:
+                    selectedTopics,
+
+                reason:
+                    reasonInput.value.trim()
 
             };
 
 
-            try {
-
-                if (
-                    navigator.share
-                ) {
-
-                    await navigator.share(
-                        shareData
-                    );
-
-                } else {
-
-                    await navigator
-                        .clipboard
-                        .writeText(
-                            window.location.href
-                        );
+            localStorage.setItem(
+                "palmProfile",
+                JSON.stringify(
+                    profileData
+                )
+            );
 
 
-                    shareMessage.style.display =
-                        "block";
+            savedMessage.style.display =
+                "block";
 
 
-                    setTimeout(
-                        function () {
+            setTimeout(
+                function () {
 
-                            shareMessage.style.display =
-                                "none";
+                    savedMessage.style.display =
+                        "none";
 
-                        },
-                        2500
-                    );
-
-                }
-
-            } catch (
-                error
-            ) {
-
-                console.log(
-                    "공유가 취소되었습니다.",
-                    error
-                );
-
-            }
+                },
+                2500
+            );
 
         }
     );
 
 </script>
-
 
 </body>
 
